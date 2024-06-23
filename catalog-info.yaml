@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: kc5p9yafr-python-gitops
+  description: This is GitOps manifest for kc5p9yafr-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: kc5p9yafr-python
+    janus-idp.io/tekton: kc5p9yafr-python 
+    backstage.io/kubernetes-id: kc5p9yafr-python 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:kc5p9yafr-python
